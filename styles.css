@@ -1,0 +1,225 @@
+:root{
+      --rect-bg: #eb8788;
+      --rect-bg-a: #eb8789ab;
+      --rect-bg2-a: #e9c0c0ab;
+
+      /*Typings*/
+      --steel: #60a1b8;
+      --water: #2980ef;
+      --bug: #91a119;
+      --dragon: #5060e1;
+      --electric: #fac000;
+      --ghost: #704170;
+      --fire: #e62829;
+      --fairy: #ef70ef;
+      --ice: #3fd8ff;
+      --fighting: #ff8000;
+      --normal: #9fa19f;
+      --grass: #3fa129;
+      --psychic: #ef4179;
+      --rock: #afa981;
+      --dark: #50413f;
+      --ground: #915121;
+      --poison: #9141cb;
+      --flying: #81b9ef;
+
+      /*Type 1 y Type 2*/
+      --tipo-p-1: #0000ff;
+      --tipo-p-2: #ff0000;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000000;
+      margin: 0;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .pokemon-card {
+      width: 680px;
+      background: linear-gradient(33deg, var(--rect-bg-a),var(--rect-bg2-a));
+      border-radius: 200px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      box-sizing: border-box;
+      
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sprite-box {
+      width: 180px;
+      height: 180px;
+      position: relative;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 16px;
+    }
+
+    .sprite-box img.sprite {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+      z-index: 2;
+    }
+
+    .tera-icon {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 50px;
+      height: 50px;
+      z-index: 20;
+    }
+
+    .white{
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      transform: translate(-8%,-8%);
+      filter: brightness(0) invert(1);
+      width: 60px;
+      height: 60px;
+      z-index: 10;
+    }
+
+    .circleBase{
+        rotate: 33deg;
+    }
+
+    .type-circle {
+      position: absolute;
+      top: -9%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 212px;
+      height: 212px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 33deg,
+        var(--tipo-p-1) 0deg 175deg,
+        var(--rect-bg) 175deg 180deg,
+        var(--tipo-p-2) 180deg 355deg,
+        var(--rect-bg) 355deg 360deg
+      );
+      border: inset 4px solid white;
+    }
+
+    .type-innercircle{
+        position: absolute;
+      top: 2%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: var(--rect-bg);
+      z-index: 1;
+    }
+
+    .inner-image{
+        position:inherit;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%,-50%); 
+        filter: invert(100%);
+    }
+
+    .middle-section {
+      flex: 1;
+      margin: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pokemon-name {
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .move {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      margin: 4px 0;
+      margin-left: 15px;
+      
+    }
+
+    .move img {
+      width: 20px;
+      height: 20px;
+      border-radius: 100px;
+    }
+
+    .right-box {
+      margin-top: 4%;
+      margin-right: 5%;
+      min-width: 120px;
+      /*background-color: #ffe9a7;*/
+      padding: 10px;
+      border-radius: 12px;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-end;
+    }
+
+    .right-box img {
+      width: 25px;
+      height: 25px;
+      transform: translateY(20%);
+    }
+
+    .card-bottom {
+        width: 500px;
+        margin-left: 70px;
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-around;
+      /*background-color: white;*/
+      border-radius: 12px;
+      padding: 8px 0;
+      box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+    }
+
+    .stat {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    .ev-value {
+      font-size: 16px;
+      font-weight: 700;
+      /*color: #333;*/
+    }
+
+    .iv-value {
+      font-size: 16px;
+      /*color: #555;*/
+    }
+
+    .buff {
+      color: #e53935;
+    }
+
+    .nerf {
+      color: #039be5;
+    }

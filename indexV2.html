@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Pokémon Card</title>
+</head>
+<body>
+  <div class="pokemon-card">
+    <div class="card-top">
+      <div class="sprite-box">
+        <img class="sprite" src="https://images2.wikidexcdn.net/mwuploads/wikidex/c/c1/latest/20230530030649/Bramaluna_HOME.png" alt="Pokemon Sprite">
+        <img class="tera-icon" src="./tera/dark.png" alt="Tera Type Icon">
+        <img class="white" src="./tera/dark.png" alt="Tera Type Icon">
+        <div class="type-innercircle"><img class="inner-image" src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/vector-icons-7/pokeball-xeg9gc4xzwluseur3c3mm.png/pokeball-qdt0o2i0d34nyhk4opt88.png?_a=DATAdtAAZAA0"></div>
+        <div class="type-circle"></div>
+      </div>
+      <div class="middle-section">
+        <div class="pokemon-name">Calyrex Shadow Rider</div>
+        <div class="move">
+          <!--<img src="https://images2.wikidexcdn.net/mwuploads/wikidex/b/b7/latest/20230107213925/Tipo_volador_icono_EP.png?20230107213925" alt="Type"> <img src="https://images2.wikidexcdn.net/mwuploads/wikidex/6/6e/latest/20250218193259/Clase_especial_EP.png" alt="Category"> Astral Barrage-->
+        </div>
+        <div class="move">
+          <!--<img src="https://images2.wikidexcdn.net/mwuploads/wikidex/b/b7/latest/20230107213925/Tipo_volador_icono_EP.png?20230107213925" alt="Type"> <img src="https://images2.wikidexcdn.net/mwuploads/wikidex/6/6e/latest/20250218193259/Clase_especial_EP.png" alt="Category"> Astral Barrage-->
+        </div>
+        <div class="move">
+          <!--<img src="https://images2.wikidexcdn.net/mwuploads/wikidex/b/b7/latest/20230107213925/Tipo_volador_icono_EP.png?20230107213925" alt="Type"> <img src="https://images2.wikidexcdn.net/mwuploads/wikidex/6/6e/latest/20250218193259/Clase_especial_EP.png" alt="Category"> Astral Barrage-->
+        </div>
+        <div class="move">
+          <!--<img src="https://images2.wikidexcdn.net/mwuploads/wikidex/b/b7/latest/20230107213925/Tipo_volador_icono_EP.png?20230107213925" alt="Type"> <img src="https://images2.wikidexcdn.net/mwuploads/wikidex/6/6e/latest/20250218193259/Clase_especial_EP.png" alt="Category"> Astral Barrage-->
+        </div>
+      </div>
+      <div class="right-box">
+        <div>As-One <img src="https://images2.wikidexcdn.net/mwuploads/wikidex/3/3a/latest/20230102183819/C%C3%A1psula_habilidad_EP.png" alt="Ability Icon"></div>
+        <div>Focus Sash<img src="https://images2.wikidexcdn.net/mwuploads/wikidex/2/23/latest/20221219014602/Energ%C3%ADa_potenciadora_EP.png" alt="Item Icon"></div>
+        <div>Timid <img src="https://images2.wikidexcdn.net/mwuploads/wikidex/thumb/a/ae/latest/20230102193234/Menta_roja_EP.png/120px-Menta_roja_EP.png" alt="Nature Icon"></div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="card-bottom">
+      <!--<div class="stat">
+        HP<br><span class="ev-value">44</span><br><span class="iv-value">31</span>
+      </div>
+      <div class="stat">
+        Atk<br><span class="ev-value">0</span><br><span class="iv-value">0</span>
+      </div>
+      <div class="stat">
+        Def<br><span class="ev-value">124</span><br><span class="iv-value">31</span>
+      </div>
+      <div class="stat" buff"">
+        SpA<br><span class="ev-value">252</span><br><span class="iv-value">31</span>
+      </div>
+      <div class="stat">
+        SpD<br><span class="ev-value">4</span><br><span class="iv-value">31</span>
+      </div>
+      <div class="stat">
+        Spe<br><span class="ev-value">84</span><br><span class="iv-value">31</span>
+      </div>-->
+    </div>
+</body>
+
+
+
+<!--<script>
+  const showdownText = `
+Aerodactyl @ Rocky Helmet  
+Ability: Unnerve  
+Level: 50  
+Tera Type: Grass  
+EVs: 4 HP / 248 Atk / 4 Def / 252 Spe  
+Jolly Nature  
+IVs: 30 Atk / 30 Def / 0 SpA  
+Typing: rock-flying
+- Roar-normal-state  
+- Hidden Power-water-special
+- Stone Edge-rock-physic
+- Aerial Ace-flying-physic
+`;
+
+  function parseShowdown(text) {
+    const lines = text.trim().split('\n');
+    const result = {
+      name: '',
+      item: '',
+      ability: '',
+      teraType: '',
+      nature: '',
+      evs: { HP: 0, Atk: 0, Def: 0, SpA: 0, SpD: 0, Spe: 0 },
+      ivs: { HP: 31, Atk: 31, Def: 31, SpA: 31, SpD: 31, Spe: 31 },
+      types: '',
+      moves: []      
+    };
+
+    const firstLine = lines[0].match(/^(.*?) @ (.*)$/);
+    if (firstLine) {
+      result.name = firstLine[1].trim();
+      result.item = firstLine[2].trim();
+    }
+
+    for (const line of lines.slice(1)) {
+      if (line.startsWith('Ability:')) {
+        result.ability = line.replace('Ability:', '').trim();
+      } else if (line.startsWith('Tera Type:')) {
+        result.teraType = line.replace('Tera Type:', '').trim();
+      } else if (line.includes('Nature')) {
+        result.nature = line.replace('Nature', '').trim();
+      } else if (line.includes('Typing: ')) {
+        result.types = line.replace('Typing: ', '').trim();
+      } else if (line.startsWith('EVs:')) {
+        const parts = line.replace('EVs:', '').split('/');
+        for (const part of parts) {
+          const [value, stat] = part.trim().split(' ');
+          result.evs[stat] = parseInt(value);
+        }
+      } else if (line.startsWith('IVs:')) {
+        const parts = line.replace('IVs:', '').split('/');
+        for (const part of parts) {
+          const [value, stat] = part.trim().split(' ');
+          result.ivs[stat] = parseInt(value);
+        }
+      } else if (line.startsWith('-')) {
+        result.moves.push(line.replace('-', '').trim());
+      }
+    }
+
+    return result;
+  }
+
+  function fillCard(data) {
+    
+    //Name + Sprite
+    document.querySelector('.pokemon-name').textContent = data.name;
+    let p_name = data.name.replace(" ", "-");
+    p_name = p_name.toLowerCase(); 
+    document.querySelector('.sprite').src = `https://img.pokemondb.net/sprites/home/normal/${p_name}.png`;
+
+    //Typing and Tera
+    var tera = data.teraType.toLowerCase();
+    document.querySelector('.tera-icon').src = `./tera/${tera}.png`
+
+    var types = data.types.split("-");
+    const t1 = types[0];
+    let t2="";
+    if(types.length > 1){
+      t2 = types[1];
+    } else {
+      t2 = types[0];
+    }
+
+    var r = document.querySelector(':root');
+    var rs = getComputedStyle(r);
+    const t_color_1 = rs.getPropertyValue(`--${t1}`).trim();
+    const t_color_2 = rs.getPropertyValue(`--${t2}`).trim();
+    r.style.setProperty('--tipo-p-2',t_color_1);
+    r.style.setProperty('--tipo-p-1',t_color_2);
+
+
+    //Moves
+    const moveEls = document.querySelectorAll('.move');
+    for (let i = 0; i < moveEls.length; i++) {
+      //const splitNameT = data.movesEls[i].split('-');
+      //console.log(splitNameT)
+      const moveNameType = data.moves[i] || '';
+      let allMove = moveNameType.split('-');
+      const moveName = allMove[0];
+      const moveType = allMove[1];
+      const moveCat= allMove[2];
+      const moveEl = moveEls[i];
+
+      // Elimina el nodo de texto existente (si hay alguno)
+      /*const existingTextNode = [...moveEl.childNodes].find(n => n.nodeType === Node.TEXT_NODE);
+      if (existingTextNode) {
+        moveEl.removeChild(existingTextNode);
+      }*/
+
+      // Añade el nuevo nombre del movimiento como texto
+
+      //Imagen del tipo del movimiento
+      var T_img = document.createElement("img");
+      T_img.src = `./tipos/${moveType}.png`;
+
+      //Imagen de la categoria del movimiento
+      var C_img = document.createElement("img");
+      C_img.src = `./categorias/${moveCat}.png`;
+
+
+      moveEl.appendChild(T_img);
+      moveEl.appendChild(C_img);
+      moveEl.appendChild(document.createTextNode(' ' + moveName));
+      moveEl.classList.add(moveType, moveCat);
+    }
+
+
+    //Item
+    var item_name = data.item.trim();
+    item_name = item_name.replace(" ", "-").toLowerCase();
+
+    const rightBox = document.querySelector('.right-box');
+    rightBox.children[0].innerHTML = `${data.ability} <img src="https://images2.wikidexcdn.net/mwuploads/wikidex/3/3a/latest/20230102183819/C%C3%A1psula_habilidad_EP.png" alt="Ability Icon">`;
+    rightBox.children[1].innerHTML = `${data.item} <img src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/${item_name}.png" alt="Item Icon">`;
+    rightBox.children[2].innerHTML = `${data.nature} <img src="https://images2.wikidexcdn.net/mwuploads/wikidex/thumb/a/ae/latest/20230102193234/Menta_roja_EP.png/120px-Menta_roja_EP.png" alt="Nature Icon">`;
+
+
+    //Stats
+    nature_dictionary={ 
+     "Adamant":["Atk","SpA"], 
+     "Bold":["Def","Atk"],
+     "Brave":["Atk","Spe"],
+     "Calm":["SpD","Atk"],
+     "Careful":["SpD","SpA"],
+     "Gentle":["SpD","Def"],
+     "Hasty":["Spe","Def"],
+     "Impish":["Def","SpA"],
+     "Jolly":["Spe","SpA"],
+     "Lax":["Def","SpD"],
+     "Lonely":["Atk","Def"],
+     "Mild":["SpA","Def"],
+     "Modest":["SpA","Atk"],
+     "Naive":["Spe","SpD"],
+     "Naughty":["Atk","SpD"],
+     "Quiet":["SpA","Spe"],
+     "Rash":["SpA","SpD"],
+     "Relaxed":["Def","Spe"],
+     "Sassy":["SpD","Spe"], 
+     "Timid":["Spe", "Atk"]
+    }
+    console.log(nature_dictionary)
+    const statEls = document.querySelector('.card-bottom');
+    console.log()
+    /*['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'].forEach((stat, i) => {
+      //console.log(stat)
+      statEls[i].querySelector('.ev-value').textContent = data.evs[stat] ?? 0;
+      statEls[i].querySelector('.iv-value').textContent = data.ivs[stat] ?? 31;
+    });
+    SpA<br><span class="ev-value">252</span><br><span class="iv-value">31</span>
+    */
+   var statlist = ['HP', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'];
+   let nature = nature_dictionary[data.nature]
+   console.log(nature);
+  statlist.forEach((stat, i) => {
+      var statistic = document.createElement("div");
+      statistic.classList.add("stat");
+
+      if (nature[0] === stat) {
+        statistic.classList.add("buff");
+      } else if (nature[1] === stat) {
+        statistic.classList.add("nerf");
+      }
+
+      // Añadir nombre del stat
+      statistic.textContent = stat;
+
+      // Crear y añadir br + EV
+      statistic.appendChild(document.createElement("br"));
+      var ev = document.createElement("span");
+      ev.classList.add("ev-value");
+      ev.textContent = data.evs[stat] ?? 0;
+      statistic.appendChild(ev);
+
+      // Crear y añadir br + IV
+      statistic.appendChild(document.createElement("br"));
+      var iv = document.createElement("span");
+      iv.classList.add("iv-value");
+      iv.textContent = data.ivs[stat] ?? 31; // ¡Ojo! Aquí estabas mostrando `evs` de nuevo
+      statistic.appendChild(iv);
+
+      // Agregar al contenedor final
+      statEls.appendChild(statistic);
+  });
+   
+  }
+
+  const parsedData = parseShowdown(showdownText);
+  fillCard(parsedData);
+</script>-->
+<script src="script.js"></script>
+</html>
