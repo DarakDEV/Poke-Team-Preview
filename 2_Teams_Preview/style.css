@@ -1,10 +1,34 @@
 :root{
-    --rect-bg: #eb8788;
-    --rect-bg-a: #eb8789ab;
-    --rect-bg2-a: #e9c0c0ab;
 
+
+    /*Oscura moderna
+    --rect-bg: #1a1a1a;
+    --card-bg: #2c2c2c;
+    --name: #3a3a3a;*/
+    
+    /*Arena
+    --rect-bg: #f0e2caaf;
+    --card-bg: #a68f6b;
+    --name: linear-gradient(45deg,rgba(160, 109, 0, 1) 0%, rgba(143, 129, 41, 1) 50%, rgba(237, 173, 83, 1) 100%);/*#a06d00; */
+    
+
+    /*Scifi
+    --rect-bg: #0d0c1d;
+    --card-bg: #1f1b2e;
+    --name: #e9ecef;*/
+
+    /*Grey Scale
+    --rect-bg: #f8f9fa;
+    --card-bg: #343a40;
+    --name: #e9ecef;*/
+
+    /*Red - Pokesimilar*/
+    --rect-bg: #eb8788;
     --card-bg: #9e2a2c;
     --name: #f0f0f0;
+
+    --text: rgb(41, 41, 41);/**/
+    /*--text: white;/**/
 
     /*Typings*/
     --steel: #60a1b8;
@@ -66,12 +90,13 @@ body {
 .pokemon-card{
     background-color: var(--card-bg);
     /*border: 1px solid #ccc;*/
-    border-radius: 8px;
+    border-radius: 8px 50px 8px 8px;
     padding: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /*box-shadow: 4px 4px 10px black; Arena Color*/
 }
 
 .card-header {
@@ -79,8 +104,8 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
-    background-color: var(--name);
-    color: rgb(41, 41, 41);
+    background: var(--name);
+    color: var(--text);/*(41, 41, 41);*/
     border-radius: 0px 50px;
     width: 100%;
     padding: 4px;
