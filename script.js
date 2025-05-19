@@ -65,6 +65,8 @@ function parseShowdown(text) {
         return data.types.map(t => t.type.name); // ['rock', 'flying']
     }
 
+    console.log("patata");
+
     async function getMoveInfo(moveName) {
     const response = await fetch(`https://pokeapi.co/api/v2/move/${moveName.toLowerCase()}`);
     const data = await response.json();
