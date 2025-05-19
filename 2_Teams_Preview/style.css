@@ -1,0 +1,170 @@
+:root{
+    --rect-bg: #eb8788;
+    --rect-bg-a: #eb8789ab;
+    --rect-bg2-a: #e9c0c0ab;
+
+    --card-bg: #9e2a2c;
+    --name: #f0f0f0;
+
+    /*Typings*/
+    --steel: #60a1b8;
+    --water: #2980ef;
+    --bug: #91a119;
+    --dragon: #5060e1;
+    --electric: #fac000;
+    --ghost: #704170;
+    --fire: #e62829;
+    --fairy: #ef70ef;
+    --ice: #3fd8ff;
+    --fight: #ff8000;
+    --normal: #9fa19f;
+    --grass: #3fa129;
+    --psychic: #ef4179;
+    --rock: #afa981;
+    --dark: #50413f;
+    --ground: #915121;
+    --poison: #9141cb;
+    --flying: #81b9ef;
+
+    /*Type 1 y Type 2*/
+    --tipo-p-1: #0000ff;
+    --tipo-p-2: #ff0000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+}
+.teams-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    height: 90vh;
+    box-sizing: border-box;
+}
+
+.team{
+    background-color: var(--rect-bg);
+    width: 45%;
+    height: 85vh;
+    border-radius: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    grid-template-rows: repeat(3, 1fr); /* 3 filas */
+    gap: 10px; /* espacio entre tarjetas */
+    height: 80vh;
+}
+
+.pokemon-card{
+    background-color: var(--card-bg);
+    /*border: 1px solid #ccc;*/
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    background-color: var(--name);
+    color: rgb(41, 41, 41);
+    border-radius: 0px 50px;
+    width: 100%;
+    padding: 4px;
+    transform: translateY(-10%);
+}
+
+.pokemon-name {
+    font-weight: bolder;
+    font-size: 1.1em;
+    margin-left: 1em;
+}
+
+.type-icons img {
+    height: 24px;
+    margin-top: 5%;
+    margin-left: 5px;
+}
+
+.tera{
+    padding-left: 4px;  /* El contenido dentro de la imagen no se mueve */
+    margin-left: 4px;   /* Esto separa la imagen del borde */
+    border-left: 1px solid rgb(46, 46, 46);
+    margin-right: 20px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.card-left {
+    flex: 1;
+    align-items: flex-start; 
+    margin-left: 10px; 
+}
+.ability{
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+.moves{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    align-items: center;
+    gap: 8px;
+}
+
+.moves li{
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 3px;
+    align-items: center;
+}
+
+.move-type {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transform: translateY(25%);
+}
+
+.card-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.pokemon-sprite{
+    height: 100px;
+    margin-bottom: 6px;
+}
+
+.item-sprite{
+    height: 36px;
+}
+
+.item-name{
+    font-size: 0.8em;
+    margin-top: 2px;
+    text-align: center;
+}
