@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=640">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Team Previews
+  </title>
+  <style>
+    :root{
+      --rect-bg: #eb8788;
+      --rect-bg-a: #eb8789ab;
+      --rect-bg2-a: #e9c0c0ab;
+
+      /*Typings*/
+      --steel: #60a1b8;
+      --water: #2980ef;
+      --bug: #91a119;
+      --dragon: #5060e1;
+      --electric: #fac000;
+      --ghost: #704170;
+      --fire: #e62829;
+      --fairy: #ef70ef;
+      --ice: #3fd8ff;
+      --fight: #ff8000;
+      --normal: #9fa19f;
+      --grass: #3fa129;
+      --psychic: #ef4179;
+      --rock: #afa981;
+      --dark: #50413f;
+      --ground: #915121;
+      --poison: #9141cb;
+      --flying: #81b9ef;
+
+      /*Type 1 y Type 2*/
+      --tipo-p-1: #0000ff;
+      --tipo-p-2: #ff0000;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000000;
+      margin: 0;
+      padding: 20px;
+      color: #fff;
+    }
+    .teams-container{
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      align-items: center;
+      height: 90vh;
+      box-sizing: border-box;
+    }
+
+    .team{
+      background-color: var(--tipo-p-1);
+      width: 45%;
+      height: 85vh;
+      border-radius: 12px;
+      padding: 10px;
+      box-sizing: border-box;
+      overflow-y: auto;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 2 columnas */
+      grid-template-rows: repeat(3, 1fr); /* 3 filas */
+      gap: 10px; /* espacio entre tarjetas */
+      height: 80vh;
+    }
+
+    .pokemon-card{
+      background-color: var(--tipo-p-2);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      background-color: #3fa129;
+      border-radius: 5px;
+      width: 100%;
+      /*border-bottom: 1px solid #ddd;*/
+      padding: 4px;
+    }
+
+    .pokemon-name {
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-left: 1em;
+    }
+
+    .type-icons img {
+      height: 24px;
+      margin-top: 5%;
+      margin-left: 5px;
+    }
+    .tera{
+      padding-left: 4px;  /* El contenido dentro de la imagen no se mueve */
+      margin-left: 4px;   /* Esto separa la imagen del borde */
+      border-left: 1px solid white;
+    }
+
+    .card-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .card-left {
+      flex: 1;
+      align-items: flex-start; 
+      margin-left: 10px; 
+    }
+    .ability{
+      font-style: italic;
+      margin-bottom: 1em;
+    }
+
+    .moves{
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .moves li{
+      font-size: 0.9em;
+      margin-bottom: 3px;
+      align-items: center;
+    }
+
+    .move-type {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .card-right{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: auto;
+      margin-right: 10px;
+    }
+
+    .pokemon-sprite{
+      height: 100px;
+      margin-bottom: 6px;
+    }
+
+    .item-sprite{
+      height: 32px;
+    }
+
+    .item-name{
+      font-size: 0.8em;
+      margin-top: 2px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <container class="teams-container">
+    <!--<div class="team team1">
+      <div class="pokemon-card">
+        <div class="card-header">
+          <div class="pokemon-name">Articuno</div>
+          <div class="type-icons">
+            <img src="../tipos/ice.png">
+            <img src="../tipos/flying.png">
+            <img src="../tera/bug.png" class="tera">
+          </div>
+        </div>
+        <div class ="card-body">
+          <div class="card-left">
+            <div class="ability">Pressure</div>
+            <ul class="moves">
+              <li><img class="move-type" src="../tipos/ice.png">Blizzard</li>
+              <li><img class="move-type" src="../tipos/ice.png">Ice Beam</li>
+              <li><img class="move-type" src="../tipos/normal.png">Protect</li>
+              <li><img class="move-type" src="../tipos/normal.png">Heavy Slam</li>
+            </ul>
+          </div>
+          <div class="card-right">
+            <img class="pokemon-sprite" src="https://img.pokemondb.net/sprites/home/normal/articuno.png" alt="pokemon">
+            <img calss="item-sprite" src="https://raw.githubusercontent.com/msikma/pokesprite/master/items/hold-item/focus-sash.png" alt="item">
+            <div class="item-name">Focus Sash</div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="pokemon-card">HOLA</div>
+      <div class="pokemon-card">HOLA</div>
+      <div class="pokemon-card">HOLA</div>
+      <div class="pokemon-card">HOLA</div>
+      <div class="pokemon-card">HOLA</div>
+    </div>
+    <div class="team team2">
+      <div class="pokemon-card">HOLA</div>
+      <div class="pokemon-card">HOLA</div>
+      <div class="pokemon-card">HOLA</div>
+      <div class="pokemon-card">HOLA</div>
+      <div class="pokemon-card">HOLA</div>
+      <div class="pokemon-card">HOLA</div>
+    </div>-->
+  </container>
+</body>
+
+
+
+<script src="./script.js"></script>
+
+</html>
